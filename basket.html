@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple House basket </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
+	<link href="css/style.css" rel="stylesheet" />
+
+
+	<style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .cart-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .cart-empty {
+            text-align: center;
+            font-size: 18px;
+            color: #888;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .cart-item-name {
+            flex: 2;
+        }
+        .cart-item-price {
+            flex: 1;
+            text-align: center;
+        }
+        .cart-item-quantity {
+            flex: 1;
+            text-align: center;
+        }
+        .cart-item-remove {
+            flex: 1;
+            text-align: right;
+        }
+        .cart-item-remove button {
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .cart-total {
+            text-align: left;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .cart-checkout {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cart-checkout button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .coupon-section {
+    margin: 20px 0;
+}
+
+#coupon-input {
+    padding: 12px;
+    width: 68%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#apply-coupon {
+    padding: 12px 18px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#apply-coupon:hover {
+    background: #218838;
+}
+
+#coupon-message {
+    margin-top: 10px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+/* دکمه‌های تست */
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    background: #8b5a2b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6d4520;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cart-item-info {
+    flex: 1;
+    min-width: 150px;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    display: block;
+}
+
+.cart-item-price {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 4px 8px;
+}
+
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: #8b5a2b;
+    color: white;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: #6d4520;
+}
+
+.quantity {
+    min-width: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cart-item-total {
+    font-weight: bold;
+    color: #d63031;
+}
+
+.remove-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.remove-btn:hover {
+    background: #c0392b;
+}
+
+.checkout-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.checkout-btn:hover {
+    background: #1e8449;
+}
+
+/* style.css - انیمیشن + ریسپانسیو */
+.btn-animated {
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-animated:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.btn-animated:active {
+    transform: translateY(0) scale(0.95);
+}
+
+.btn-animated::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 0;
+    background: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    pointer-events: none;
+}
+
+.btn-animated.ripple::after {
+    width: 300px; height: 300px; opacity: 0;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(39,174,96,0.7); }
+    70% { box-shadow: 0 0 0 12px rgba(39,174,96,0); }
+    100% { box-shadow: 0 0 0 0 rgba(39,174,96,0); }
+}
+
+.checkout-btn {
+    animation: pulse 2s infinite;
+    background: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.qty-btn {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: #8b5a2b;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover { transform: scale(1.1); background: #6d4520; }
+.qty-btn:active { transform: scale(0.9); }
+
+.remove-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.remove-btn:hover { background: #c0392b; }
+
+.cart-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px dashed #eee; flex-wrap: wrap; gap: 10px; }
+.quantity-controls { display: flex; align-items: center; gap: 8px; background: #f8f9fa; border-radius: 20px; padding: 4px 8px; }
+.quantity { min-width: 24px; text-align: center; font-weight: bold; }
+
+    /*QR CODE*/
+	.qr-section {
+    	text-align: center;
+    	padding: 30px 20px;
+    	background: #f8f9fa;
+    	border-radius: 15px;
+    	margin: 30px auto;
+    	max-width: 400px;
+    	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		}
+
+	.qr-code {
+    	width: 180px;
+    	height: 180px;
+    	border: 8px solid white;
+    	border-radius: 12px;
+    	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    	margin: 15px auto;
+    	display: block;
+			}
+
+	.qr-section h3 {
+    	color: #8b5a2b;
+    	margin-bottom: 10px;
+    	font-size: 1.3rem;
+	}
+
+	.qr-section p {
+   	 	color: #666;
+    	font-size: 0.95rem;
+    	margin: 10px 0;
+		}
+
+	.qr-link {
+    	display: inline-block;
+   	 	margin-top: 10px;
+   	 	color: #27ae60;
+    	text-decoration: none;
+    	font-weight: bold;
+    	font-size: 0.9rem;
+	}
+
+	.qr-link:hover {
+    	color: #1e8449;
+	}
+ 
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+	<!-- Top box -->
+		<!-- Logo ... -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" >
+				<div class="mainphoto">
+					<img class="mainphoto1" src="img/IMG_8322.JPG">
+				</div>			
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<div class="mainlogo">
+								<img src="img/mainlogo Small.png" alt="Logo" class="tm-site-logo" /> 
+							</div>
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">نورو - NoRo</h1>
+								<h6 class="tm-site-description">Noro cafe and restaurant</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="index.html" class="tm-nav-link">خانه</a></li>
+								<li class="tm-nav-li"><a href="about.html" class="tm-nav-link">درباره</a></li>
+								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link ">نظرات شما</a></li>
+								<li class="tm-nav-li">
+									<a href="basket.html" class="tm-nav-link active">
+										سبد خرید
+									</a>
+								</li>
+								<li class="tm-nav-li">
+									<a href="login.html" class="tm-nav-link">
+										عضویت/ ورود
+									</a>
+								</li>
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cart-container">
+			<h2 style="font-family: 'Vazirmatn'">سبد خرید شما</h2>
+			<div id="cart-items"></div>
+			<div id="cart-item-count" class="cart-item-count"></div> <!-- بخش جدید برای تعداد کل -->
+			<div id="cart-total" class="cart-total"></div>
+			<div id="cart-checkout" class="cart-checkout"></div>
+		</div>
+        
+             <!-- کد تخفیف -->
+             <div style="margin-right: 300px;">
+                <div class="coupon-section">
+                    <input type="text" id="coupon-input" placeholder="کد تخفیف را وارد کنید (مثل CAFE20)">
+                    <button id="apply-coupon">اعمال کد</button>
+                    <p id="coupon-message"></p>
+                </div>
+        
+                <div class="final-total">
+                     <strong>مبلغ قابل پرداخت: <span id="final-price">0</span> تومان</strong>
+                     <div id="cart-item-count"></div>
+                    <div id="cart-items"></div>
+                    <div id="total-price" hidden></div>
+                    <div id="final-price"></div>
+                    <div id="cart-checkout"></div>
+                    </div>
+                </div>
+             </div>
+
+             <div id="cart">
+                <div id="cart-item-count"></div>
+                <div id="cart-items"></div>
+                <div id="total-price" hidden></div>
+                <div id="final-price"></div>
+                <div id="cart-checkout"></div>
+            </div>
+                    
+		<footer class="tm-footer text-center">
+			<div class="reservation-form">
+				<h2>رزرو آنلاین میز</h2>
+				<form id="reservationForm">
+					<label for="name">نام:</label>
+					<input type="text" id="name" name="name" required>
+	
+					<label for="date">تاریخ:</label>
+					<input type="date" id="date" name="date" required>
+	
+					<label for="time">ساعت:</label>
+					<input type="time" id="time" name="time" required>
+	
+					<label for="guests">تعداد نفرات:</label>
+					<input type="number" id="guests" name="guests" min="1" max="20" required>
+	
+					<button type="submit">رزرو کنید</button>
+				</form>
+				<p id="confirmation" style="display: none;"></p>
+			</div>
+            <div class="qr-section">
+				<h3>منوی ما رو اسکن کنید!</h3>
+				<img src="img/QR code/8Fg5Kh.svg" alt="QR Code منو" class="qr-code">
+				<p>با اسکن این کد، منو رو در گوشی ببینید</p>
+				<a href="https://noro.cafe/menu" class="qr-link">یا مستقیم وارد شوید</a>
+			</div>
+            <i class="fa fa-phone"></i>
+			<i class="fa fa-envelope"></i>
+			<p>تماس با ما: 214536819 | ایمیل: noro.gmail.com</p>
+
+			<p>Copyright &copy; NoRo
+            
+				| Design:  </p>
+		</footer>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+	<script src="js/script.js"></script>
+    
+    <script>
+
+// لود سبد از localStorage
+function loadCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItemsDiv.innerHTML = '';
+    let total = 0;
+    let totalItems = 0;
+
+    if (cart.length === 0) {
+        cartItemsDiv.innerHTML = '<p class="cart-empty">سبد خرید شما خالی است.</p>';
+        cartItemCountDiv.innerHTML = 'تعداد کل آیتم‌ها: 0';
+        totalPriceSpan.textContent = '0';
+        finalPriceSpan.textContent = '0';
+        cartCheckoutDiv.innerHTML = '';
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        totalItems += item.quantity;
+
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+            <div class="cart-item-info">
+                <span class="cart-item-name">${item.name}</span>
+                <span class="cart-item-price">${item.price.toLocaleString()} تومان</span>
+            </div>
+            <div class="quantity-controls">
+                <button class="qty-btn minus btn-animated ripple" onclick="changeQuantity(${index}, -1)">−</button>
+                <span class="quantity">${item.quantity}</span>
+                <button class="qty-btn plus btn-animated ripple" onclick="changeQuantity(${index}, 1)">+</button>
+            </div>
+            <div class="cart-item-total">
+                <strong>${itemTotal.toLocaleString()} تومان</strong>
+            </div>
+            <button class="remove-btn btn-animated ripple" onclick="removeFromCart(${index})">حذف</button>
+        `;
+        cartItemsDiv.appendChild(div);
+    });
+
+    cartItemCountDiv.innerHTML = `تعداد کل آیتم‌ها: ${totalItems}`;
+    totalPriceSpan.textContent = total.toLocaleString();
+    calculateFinalPrice(total); // مهم: این خط باعث بروزرسانی مبلغ نهایی میشه!
+    cartCheckoutDiv.innerHTML = '<button onclick="checkout()" class="checkout-btn btn-animated ripple">پرداخت</button>';
+}
+
+// تغییر تعداد (+ یا -)
+function changeQuantity(index, change) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const newQty = cart[index].quantity + change;
+
+    if (newQty <= 0) {
+        cart.splice(index, 1);
+    } else {
+        cart[index].quantity = newQty;
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartNotification();
+    loadCart();
+}
+
+// حذف کامل آیتم
+function removeFromCart(index) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartNotification();
+    loadCart();
+}
+
+// اضافه کردن به سبد
+function addToCart(name, price, quantity = 1) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    } else {
+        cart.push({ name, price, quantity });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartNotification();
+    loadCart();
+}
+
+// 5 کد تخفیف با تاریخ انقضا
+const validCoupons = {
+    "NOORO10": { discount: 10, type: "percent", expires: "2025-12-31" },
+    "CAFE20":  { discount: 20, type: "percent", expires: "2025-11-15" },
+    "PIZZA50": { discount: 50000, type: "fixed", expires: "2025-11-25" },
+    "DESSERT": { discount: 15, type: "percent", expires: "2025-12-01" },
+    "WELCOME": { discount: 10000, type: "fixed", expires: "2025-11-26" }
+};
+
+let appliedCoupon = null;
+
+// DOM Elements
+const cartItemsDiv = document.getElementById('cart-items');
+const totalPriceSpan = document.getElementById('total-price');
+const finalPriceSpan = document.getElementById('final-price');
+const couponInput = document.getElementById('coupon-input');
+const applyBtn = document.getElementById('apply-coupon');
+const couponMessage = document.getElementById('coupon-message');
+const cartItemCountDiv = document.getElementById('cart-item-count');
+const cartCheckoutDiv = document.getElementById('cart-checkout');
+
+// تبدیل تاریخ به شمسی
+function toPersianDate(dateStr) {
+    const [y, m, d] = dateStr.split('-');
+    return `${y}/${m}/${d}`;
+}
+
+// بررسی انقضا
+function isCouponExpired(expiryDate) {
+    const today = new Date();
+    const [year, month, day] = expiryDate.split('-').map(Number);
+    const expiry = new Date(year, month - 1, day);
+    return today > expiry;
+}
+
+// محاسبه قیمت نهایی با تخفیف
+function calculateFinalPrice(total) {
+    let final = total;
+
+    if (appliedCoupon && validCoupons[appliedCoupon] && !isCouponExpired(validCoupons[appliedCoupon].expires)) {
+        const coupon = validCoupons[appliedCoupon];
+        if (coupon.type === "percent") {
+            final = total * (1 - coupon.discount / 100);
+        } else if (coupon.type === "fixed") {
+            final = total - coupon.discount;
+            if (final < 0) final = 0;
+        }
+    }
+
+    finalPriceSpan.textContent = Math.round(final).toLocaleString();
+}
+
+// اعمال کد تخفیف
+applyBtn.addEventListener("click", () => {
+    const code = couponInput.value.trim().toUpperCase();
+
+    if (!code) {
+        couponMessage.innerHTML = '<span style="color:red;">کد را وارد کنید.</span>';
+        return;
+    }
+
+    if (appliedCoupon === code) {
+        couponMessage.innerHTML = '<span style="color:#e67e22;">قبلاً استفاده شده!</span>';
+        return;
+    }
+
+    if (!validCoupons[code]) {
+        couponMessage.innerHTML = '<span style="color:red;">کد نامعتبر است.</span>';
+        return;
+    }
+
+    if (isCouponExpired(validCoupons[code].expires)) {
+        couponMessage.innerHTML = `
+            <span style="color:red;">منقضی شده!</span>
+            <small style="color:#777;">معتبر تا: ${toPersianDate(validCoupons[code].expires)}</small>
+        `;
+        return;
+    }
+
+    appliedCoupon = code;
+    const coupon = validCoupons[code];
+    const symbol = coupon.type === "percent" ? "%" : " تومان";
+
+    couponMessage.innerHTML = `
+        <strong style="color:green;">اعمال شد!</strong> 
+        ${coupon.discount}${symbol} تخفیف
+        <small style="color:#27ae60;">معتبر تا: ${toPersianDate(coupon.expires)}</small>
+    `;
+
+    loadCart(); // بروزرسانی قیمت نهایی
+    couponInput.value = "";
+});
+
+// به‌روزرسانی نوتیفیکیشن
+function updateCartNotification() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const notification = document.getElementById('cart-notification');
+    if (notification) {
+        notification.textContent = totalItems;
+        notification.style.display = totalItems > 0 ? 'flex' : 'none';
+    }
+}
+
+// پرداخت
+function checkout() {
+    if (confirm("پرداخت انجام شود؟")) {
+        alert("سفارش شما ثبت شد!");
+        localStorage.removeItem('cart');
+        appliedCoupon = null;
+        loadCart();
+        updateCartNotification();
+    }
+}
+
+// فعال کردن Ripple
+function enableRipple() {
+    document.querySelectorAll('.ripple').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            this.classList.remove('ripple');
+            void this.offsetWidth;
+            this.classList.add('ripple');
+        });
+    });
+}
+
+// لود اولیه
+window.onload = () => {
+    loadCart();
+    updateCartNotification();
+    enableRipple();
+};
+    </script>
+
+</body>
+</html>

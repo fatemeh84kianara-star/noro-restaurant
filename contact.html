@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple House-contact page </title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<style>
+     /*QR CODE*/
+	.qr-section {
+    	text-align: center;
+    	padding: 30px 20px;
+    	background: #f8f9fa;
+    	border-radius: 15px;
+    	margin: 30px auto;
+    	max-width: 400px;
+    	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		}
+
+	.qr-code {
+    	width: 180px;
+    	height: 180px;
+    	border: 8px solid white;
+    	border-radius: 12px;
+    	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    	margin: 15px auto;
+    	display: block;
+			}
+
+	.qr-section h3 {
+    	color: #8b5a2b;
+    	margin-bottom: 10px;
+    	font-size: 1.3rem;
+	}
+
+	.qr-section p {
+   	 	color: #666;
+    	font-size: 0.95rem;
+    	margin: 10px 0;
+		}
+
+	.qr-link {
+    	display: inline-block;
+   	 	margin-top: 10px;
+   	 	color: #27ae60;
+    	text-decoration: none;
+    	font-weight: bold;
+    	font-size: 0.9rem;
+	}
+
+	.qr-link:hover {
+    	color: #1e8449;
+	}
+    </style>
+</head>
+
+
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" >
+				<div class="mainphoto">
+					<img class="mainphoto1" src="img/IMG_8322.JPG">
+				</div>			
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<div class="mainlogo">
+								<img src="img/mainlogo Small.png" alt="Logo" class="tm-site-logo" /> 
+							</div>
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">نورو - NoRo</h1>
+								<h6 class="tm-site-description">Noro cafe and restaurant</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="index.html" class="tm-nav-link">خانه</a></li>
+								<li class="tm-nav-li"><a href="about.html" class="tm-nav-link">درباره</a></li>
+								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link active">نظرات شما</a></li>
+								<li class="tm-nav-li">
+									<a href="basket.html" class="tm-nav-link">
+										سبد خرید
+									</a>
+								</li>
+								<li class="tm-nav-li">
+									<a href="login.html" class="tm-nav-link">
+										عضویت/ ورود
+									</a>
+								</li>
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title" style="font-family: 'Vazirmatn';">نظرات شما</h2>
+				<p class="col-12 text-center">You may use <a rel="nofollow" href="https://www.ltcclock.com/downloads/simple-contact-form/" target="_blank">Simple Contact Form</a> to send email to your inbox.</p>
+			</header>
+
+			<div class="tm-container-inner-2 tm-contact-section">
+				<div class="row">
+					<div class="col-md-6">
+						<form action="" method="POST" class="tm-contact-form">
+					        <div class="form-group">
+					          <input type="text" name="name" class="form-control" placeholder="اسم" required="" />
+					        </div>
+					        
+					        <div class="form-group">
+					          <input type="email" name="email" class="form-control" placeholder="ایمیل" required="" />
+					        </div>
+				
+					        <div class="form-group">
+					          <textarea rows="5" name="message" class="form-control" placeholder="نظر شما" required=""></textarea>
+					        </div>
+					
+					        <div class="form-group tm-d-flex">
+					          <button type="submit" class="tm-btn tm-btn-success tm-btn-right">
+					            ارسال
+					          </button>
+					        </div>
+						</form>
+					</div>
+					<div class="col-md-6">
+						<div class="tm-address-box">
+							<h4 class="tm-info-title tm-text-success">ادرس ما</h4>
+							<address>
+								تهران
+							</address>
+							<a href="tel:080-090-0110" class="tm-contact-link">
+								<i class="fas fa-phone tm-contact-icon"></i>214536819
+							</a>
+							<a href="mailto:info@company.co" class="tm-contact-link">
+								<i class="fas fa-envelope tm-contact-icon"></i>noro.gmail.com
+							</a>
+							<div class="tm-contact-social">
+								<a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram tm-social-icon"></i></a>
+								<a href="https://telegram.com" class="tm-social-link"><i class="fab fa-telegram tm-social-icon"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+<!-- How to change your own map point
+	1. Go to Google Maps
+	2. Click on your location point
+	3. Click "Share" and choose "Embed map" tab
+	4. Copy only URL and paste it within the src="" field below
+-->
+			<div class="tm-container-inner-2 tm-map-section">
+				<div class="row">
+					<div class="col-12">
+						<div class="tm-map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11196.961132529668!2d-43.38581128725845!3d-23.011063013218724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdb695cd967b7%3A0x171cdd035a6a9d84!2sAv.%20L%C3%BAcio%20Costa%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%20Brazil!5e0!3m2!1sen!2sth!4v1568649412152!5m2!1sen!2sth" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tm-container-inner-2 tm-info-section">
+				<div class="row">
+					<!-- FAQ -->
+					<div class="col-12 tm-faq">
+						<h2 class="text-center tm-section-title">FAQs</h2>
+						<p class="text-center" style="font-family: 'Vazirmatn';">سوال های پر تکرار</p>
+						<div class="tm-accordion">
+							<button class="accordion" style="font-family: 'Tahoma';">۱.ساعات کاری نورو چیست؟ </button>
+							<div class="panel" style="font-family: 'Vazirmatn'">
+							  <p>هر روز از ساعت ۱۱ صبح تا ۱۱ شب (به جز روز های تعطیل رسمی)</p>
+							</div>
+							
+							<button class="accordion"  style="font-family: 'Tahoma';">۲. روش های پرداخت چگونه است؟ </button>
+							<div class="panel" style="font-family: 'Vazirmatn'">
+							  <p>می توایند مبلغ سفارش را به صورت انلاین پرداخت کنید یا در خود نورو.</p>
+							</div>
+							
+							<button class="accordion"  style="font-family: 'Tahoma';">۳.آیا امکان رزرو میز وجود دارد؟ </button>
+							<div class="panel" style="font-family: 'Vazirmatn'">
+							  <p>بله، شما می توانید از طریق تماس تلفنی یا فرم رزرودر سایت میز خود را رزرو کنید.</p>
+							</div>
+							
+							<button class="accordion"  style="font-family: 'Tahoma';">۴. آیا گزینه گیاهی دارید؟ </button>
+							<div class="panel" style="font-family: 'Vazirmatn'">
+								<p>بله، در منوی ما چند مدل غذای گیاهی وجود دارد که می توانید از بخش منو مشاهده کنید. </p>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="tm-footer text-center">
+			<div class="reservation-form">
+				<h2>رزرو آنلاین میز</h2>
+				<form id="reservationForm">
+					<label for="name">نام:</label>
+					<input type="text" id="name" name="name" required>
+	
+					<label for="date">تاریخ:</label>
+					<input type="date" id="date" name="date" required>
+	
+					<label for="time">ساعت:</label>
+					<input type="time" id="time" name="time" required>
+	
+					<label for="guests">تعداد نفرات:</label>
+					<input type="number" id="guests" name="guests" min="1" max="20" required>
+	
+					<button type="submit">رزرو کنید</button>
+				</form>
+				<p id="confirmation" style="display: none;"></p>
+			</div>
+			<div class="qr-section">
+				<h3>منوی ما رو اسکن کنید!</h3>
+				<img src="img/QR code/8Fg5Kh.svg" alt="QR Code منو" class="qr-code">
+				<p>با اسکن این کد، منو رو در گوشی ببینید</p>
+				<a href="https://noro.cafe/menu" class="qr-link">یا مستقیم وارد شوید</a>
+			</div>
+			<i class="fa fa-phone"></i>
+			<i class="fa fa-envelope"></i>
+			<p>تماس با ما: 214536819 | ایمیل: noro.gmail.com</p>
+
+			<p>Copyright &copy; NoRo
+            
+            | Design: </p>
+		</footer>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/script.js"></script>
+
+	 <script>
+		 // مدیریت فرم
+		 document.getElementById('reservationForm').addEventListener('submit', function(event) {
+			 event.preventDefault();
+			 alert('رزرو شما ثبت شد!');
+		 });
+	 </script>
+	 
+	 <script>
+		$(document).ready(function(){
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].addEventListener("click", function() {
+			    this.classList.toggle("active");
+			    var panel = this.nextElementSibling;
+			    if (panel.style.maxHeight) {
+			      panel.style.maxHeight = null;
+			    } else {
+			      panel.style.maxHeight = panel.scrollHeight + "px";
+			    }
+			  });
+			}	
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Noro </title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />  
+	<link href="css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	
+	<style>
+
+		body {
+		  background-image: url('img/IMG_9D05019FED67-1.jpeg');
+		}
+
+		 html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+		body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif !important;
+            direction: rtl;
+            text-align: right;
+            background: #f8f9fa;
+            line-height: 1.7;
+            color: #444;
+            overflow-x: hidden;
+			
+        }
+
+
+		/*QR CODE*/
+		.qr-section {
+    		text-align: center;
+    		padding: 30px 20px;
+    		background: #f8f9fa;
+    		border-radius: 15px;
+    		margin: 30px auto;
+    		max-width: 400px;
+    		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			}
+
+		.qr-code {
+    		width: 180px;
+    		height: 180px;
+    		border: 8px solid white;
+    		border-radius: 12px;
+    		box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    		margin: 15px auto;
+    		display: block;
+				}
+
+		.qr-section h3 {
+    		color: #8b5a2b;
+    		margin-bottom: 10px;
+    		font-size: 1.3rem;
+		}
+
+		.qr-section p {
+   	 		color: #666;
+    		font-size: 0.95rem;
+    		margin: 10px 0;
+			}
+
+		.qr-link {
+    		display: inline-block;
+   	 		margin-top: 10px;
+   	 		color: #27ae60;
+    		text-decoration: none;
+    		font-weight: bold;
+    		font-size: 0.9rem;
+		}
+
+		.qr-link:hover {
+    		color: #1e8449;
+		}/* ==================== ریسپانسیو ==================== */
+@media (max-width: 992px) {
+    .tm-header-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .tm-nav-ul {
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .tm-nav-link {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax-window {
+        min-height: 380px !important;
+        background: url('img/IMG_8322.JPG') center/cover no-repeat;
+        background-attachment: fixed;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .tm-gallery-page {
+        grid-template-columns: 1fr !important;
+        gap: 18px;
+    }
+
+    .tm-paging-links ul {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .tm-paging-link {
+        padding: 8px 14px;
+        font-size: 0.88rem;
+        white-space: nowrap;
+    }
+
+    .Menue {
+        font-size: 1.9rem;
+    }
+
+    .tm-gallery-item img {
+        height: 160px;
+    }
+
+    .tm-gallery-title {
+        font-size: 1.2rem;
+    }
+
+    .tm-gallery-price {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .parallax-window {
+        min-height: 340px !important;
+        background-attachment: scroll;
+    }
+
+    .tm-gallery-item img {
+        height: 140px;
+    }
+
+    .tm-paging-link {
+        padding: 7px 12px;
+        font-size: 0.85rem;
+    }
+
+    .basket-icon {
+        width: 36px;
+        height: 36px;
+        left: 12px;
+        bottom: 12px;
+    }
+
+    .basket-icon i {
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+	
+</head>
+
+	<div class="container">
+			<!-- Logo & Site Name -->
+			<div class="placeholder">
+				<div class="parallax-window" data-parallax="scroll" >
+					<div class="mainphoto">
+						<img class="mainphoto1" src="img/IMG_8322.JPG">
+					</div>			
+					<div class="tm-header">
+						<div class="row tm-header-inner">
+							<div class="col-md-6 col-12">
+								<div class="mainlogo">
+									<img src="img/mainlogo Small.png" alt="Logo" class="tm-site-logo" /> 
+								</div>
+								<div class="tm-site-text-box">
+									<h1 class="tm-site-title">نورو - NoRo</h1>
+									<h6 class="tm-site-description">Noro cafe and restaurant</h6>	
+								</div>
+							</div>
+							<nav class="col-md-6 col-12 tm-nav">
+								<ul class="tm-nav-ul">
+									<li class="tm-nav-li"><a href="index.html" class="tm-nav-link active">خانه</a></li>
+									<li class="tm-nav-li"><a href="about.html" class="tm-nav-link">درباره ما</a></li>
+									<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link ">نظرات شما</a></li>
+									<li class="tm-nav-li">
+										<a href="basket.html" class="tm-nav-link">
+											سبد خرید
+										</a>
+									</li>
+									<li class="tm-nav-li">
+										<a href="login.html" class="tm-nav-link">
+											عضویت/ ورود
+										</a>
+									</li>
+								</ul>
+							</nav>	
+						</div>
+					</div>
+				</div>
+
+				
+				 <div class="navbar">
+					<a href="cart.html" class="cart-link">
+						<span id="cart-notification" class="cart-notification">
+							0
+							سبد خرید
+						</span>
+					</a>
+				</div>
+			</div>
+
+				
+
+			<main>
+				<header class="tm-welcome-section" style="text-align:center; padding:40px 20px;">
+					<h2 class="tm-section-title" style="font-size:2rem; margin-bottom:15px;font-family: 'Vazirmatn';">پذیرای شما مهمانان گرامی هستیم</h2>
+					<p style="max-width:700px; margin:0 auto; color:#666;font-family: 'Tahoma'">رستوران نورو با بهره‌گیری از باکیفیت‌ترین مواد اولیه، بهترین غذاها را برای شما فراهم می‌آورد.</p>
+				</header>
+		
+				<div class="Menu0">
+					<img src="img/IMG_D3F68B28B252-1.jpeg" class="Menu" >
+				</div>
+			<div class="tm-paging-links">
+				<nav>
+					<ul>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link active">پیتزا</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link " >سالاد</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">نوشیدنی</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">پاستا</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">ساندویچ</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">کافی</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">دسر</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">پیش-غذا</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Menue -->
+			<div class="row tm-gallery">
+
+				<div id="tm-gallery-page-پیتزا" class="tm-gallery-page">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img  src="img/gallery/output-onlinepngtools.png" class="pizza-beef-and-mushroom">
+							<div class="star ">3/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title"  style="font-family: 'Vazirmatn'">پیتزا گوشت و قارچ</h4>
+								<p class="tm-gallery-description" style="font-family: 'Tahoma'">خمیر پیتزا آمریکایی، گوشت چرخ کرده،پیاز،قارچ تازه، فلفل دلمه سبز و قرمز،سس قرمز مخصوص،۴ نوع پنیر</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۴۴۷،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' پیتزا گوشت و قارچ', 215000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/1output-onlinepngtools.png" class="pizza-beef-and-mushroom">
+							<div class="star ">4/5</div>
+						
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پیتزا پپرونی</h4>
+								<p class="tm-gallery-description" style="font-family: 'Tahoma'">خمیر پیتزا آمریکایی، سالامی، قارچ تازه، فلفل هالوپینو، فلفل دلمه سبز و قرمز، سس تند مخصوص</p>
+								<div class="star-icon" >
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked "></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۳۵۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('پیتزا پپرونی',350000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/output-onlinepngtools.png" class="pizza-beef-and-mushroom">
+							<div class="star ">4/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پیتزا مخلوط</h4>
+								<p class="tm-gallery-description">سس مخصوص نورو،ادویه ایتالیایی،زیتون سیاه،فلفل سبز و قرمز،خمیر پیتزا نورو ، گوشت،قارچ</p>
+								<div class="star-icon" >
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>	
+								<p class="tm-gallery-price">۵۰۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('پیتزا مخلوط',500000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/3output-onlinepngtools.png" class="pizza-beef-and-mushroom">
+							<div class="star ">2/5</div>
+							<div class="basket-icon ">
+								<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+								bottom: 10px;
+								padding: 5px 8px;
+								border-radius: 2px;
+								margin-bottom: 80px;
+								cursor: pointer;"></i>
+							</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پیتزا سبزیجات</h4>
+								<p class="tm-gallery-description">خمیر پیتزا آمریکایی، ذرت، پیاز، قارچ طعم دار، زیتون سیاه،فلفل دلمه سبز و قرمز، گوجه، سس پستو، ادویه ایتالیایی، ۴ نوع پنیر</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۳۰۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('پیتزا سبزیجات',300000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/4output-onlinepngtools.png" class="pizza-beef-and-mushroom">
+							<div class="star ">4/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پیتزا رست بیف</h4>
+								<p class="tm-gallery-description">خمیر پیتزا آمریکایی، سس مخصوص، رست بیف، پنیر ویژه،قارچ، فلفل دلمه ای، گوجه فرنگی نورو</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۶۰۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('پیتزا رست بیف',600000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/6IMG_13E33C063D11-5.png" class="pizza-beef-and-mushroom">
+							<div class="star ">3/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پیتزا مرغ</h4>
+								<p class="tm-gallery-description">سس مخصوص،خمیر پیتزا،مرغ قارچ، فلفل دلمه ای، گوجه فرنگی</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۴۲۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('پیتزا مرغ',420000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/7IMG_13E33C063D11-7.png" class="pizza-beef-and-mushroom">
+							<div class="star ">4/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پیتزا مخصوص نورو </h4>
+								<p class="tm-gallery-description">آناناس،پیاز،قارچ،گوشت، خمیر پیتزا, سس مخصوص</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۴۵۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('پیتزا مخصوص نورو',450000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/8IMG_13E33C063D11-2.png" class="pizza-beef-and-mushroom">
+							<div class="star ">4/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پیتزا سیر و استیک</h4>
+								<p class="tm-gallery-description">خمیر پیتزا آمریکایی، سس سیر مخصوص، استیک، پنیر مخصوص</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۶۷۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('پیتزا سیر و استیک',670000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+				</div> 
+				
+				<div id="tm-gallery-page-سالاد" class="tm-gallery-page hidden">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/erasebg-transformed.png" class="pizza-beef-and-mushroom">
+							<div class="star ">4/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">سالاد سزار</h4>
+								<p class="tm-gallery-description">۳۵۰گرم، سینه مرغ گریل شده، کاهو، نان کروتان، سبزیجات برگی، سبزی کیل، پنیر پارمسان، گوجه گیلاسی، سس سالاد سزار</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۱۰۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('سالاد سزار',100000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/1erasebg-transformed.png" class="pizza-beef-and-mushroom">
+							<div class="star ">4/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">سالاد کلم</h4>
+								<p class="tm-gallery-description">
+									سس مخصوص نورو ، کلم سفید، هویح، کلم قرمز،  کشمش اختیاری بریزیم برای شما 
+									۱۶۰ گرم سالاد کلم
+								</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۷۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('سالاد کلم',70000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/2erasebg-transformed.png" class="pizza-beef-and-mushroom">
+							<div class="star ">3/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">سالاد فصل</h4>
+								<p class="tm-gallery-description">
+									سالاد فصل
+									، سس مخصوص نورو ، خیار ، گوجه ، ذرت ، هویج، دیپ مخصوص نورو ،
+									می توانید میوه های فصل هم اضاقه کنید.
+								</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۴۵،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('سالاد فصل',45000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/3erasebg-transformed.png" class="pizza-beef-and-mushroom">
+							<div class="star ">4/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">سالاد با فیله مرغ</h4>
+								<p class="tm-gallery-description">فیله مرغ،کتهو
+									گوجه ، فلفل، سس مخصوص نورو ، کلم بروکلی ، نان مخصوص نورو، می تواینم نان شما را تست کنیم.
+								</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۱۲۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('سالاد با فیله مرغ',120000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/7erasebg-transformed (1).png" class="pizza-beef-and-mushroom">
+							<div class="star ">3/5</div>
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">سالاد با مرغ گریل</h4>
+								<p class="tm-gallery-description">مرغ گریل،کاهو</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۱۴۵،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('سالاد با مرغ گریل',145000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/8erasebg-transformed.png" class="pizza-beef-and-mushroom">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">سالاد فتوش</h4>
+								<p class="tm-gallery-description">تکه‌های سرخ شدهٔ پیتا، سبزی و تره‌بار،نان</p>
+								<div class="star ">2/5</div>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۶۷،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('سالاد  فتوش',670000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>	
+				</div> 
+				
+				<div id="tm-gallery-page-نوشیدنی" class="tm-gallery-page hidden">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/IMG_5D99EC6F1AED-1.jpeg" class="coca">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">نوشابه کوکاکولا خانواده</h4>
+								<p class="tm-gallery-description">۱/۵ لیتر</p>
+								<p class="tm-gallery-price">۵۵،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart('نوشابه کوکاکولا خانواده ', 55000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/0erasebg-transformed.png" class="sprite">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">نوشابه اسپرایت خانواده</h4>
+								<p class="tm-gallery-description">۱/۵ لیتر</p>
+								<p class="tm-gallery-price">۵۵،۰۰۰تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' نوشابه اسپرایت  خانواده', 55000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/IMG_5D99EC6F1AED-2.jpeg" class="pepsi">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">نوشابه پپسی خانواده</h4>
+								<p class="tm-gallery-description">۱/۵ لیتر</p>
+								<p class="tm-gallery-price">۵۵،۰۰۰تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' نوشابه پپسی  خانواده', 55000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+				
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/IMG_5D99EC6F1AED-6.jpeg" class="pepsi">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">دلستر قوطی هلو</h4>
+								<p class="tm-gallery-description">۳۳۰ میلی لیتر</p>
+								<p class="tm-gallery-price">۳۴،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' دلستر قوطی  هلو', 34000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/IMG_5D99EC6F1AED-5.jpeg" class="pepsi">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">نوشابه لیموناد</h4>
+								<p class="tm-gallery-description">۳۳۰ میلی لیتر</p>
+								<p class="tm-gallery-price">۳۴،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' نوشابه لیموناد  ', 34000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/9erasebg-transformed.png"  class="water">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">آب معدنی کوچک</h4>
+								<p class="tm-gallery-description">۳۳۰ میلی لیتر</p>
+								<p class="tm-gallery-price">۲۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' اب معدنی ', 20000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/10erasebg-transformed.png" class="dogh">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">دوغ عالیس</h4>
+								<p class="tm-gallery-description">۳۳۰ میلی لیتر</p>
+								<p class="tm-gallery-price">۳۰،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' دوغ عالیس  ', 30000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/IMG_5D99EC6F1AED-7.jpeg" class="dogh">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">دلستر استوایی</h4>
+								<p class="tm-gallery-description">۳۳۰ میلی لیتر</p>
+								<p class="tm-gallery-price">۳۴،۰۰۰ تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' دلستر استوایی  ', 34000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+				</div> 
+
+				<div id="tm-gallery-page-پاستا" class="tm-gallery-page hidden">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/JPEG image-4651-AC6D-F5-10.jpeg"  class="pizza-beef-and-mushroom">
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پاستا چیکن آلفردو</h4>
+							<p class="tm-gallery-description">سس الفردو، مرغ،ادویه ابتالیایی،پاستا دست ساز</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۴۵۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' پاستا چیکن  الفردو', 450000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/12erasebg-transformed.png" class="pizza-beef-and-mushroom">
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پاستا سبزیجات</h4>
+							<p class="tm-gallery-description">بروکلی،سس سویا،پاستا دست ساز،ادویه ایتالیایی</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۲۰۰،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' پاستا سبزیجات  ', 200000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/13erasebg-transformed.png"  class="pizza-beef-and-mushroom">
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پاستا پستو</h4>
+							<p class="tm-gallery-description">سس پستو، اسفناج
+								پاستا دست ساز
+								ادویه ایتالیایی
+							</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۳۴۰،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' پاستا پستو ', 340000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+			</div>
+
+				<div id="tm-gallery-page-ساندویچ" class="tm-gallery-page hidden">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/15erasebg-transformed.png" class="pizza-beef-and-mushroom">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">همبرگر مخصوص </h4>
+							<p class="tm-gallery-description">۱۶۰ گرم برگر دست ساز ،نان گرد،کاهو،خیارشور،پیاز حلقه ایی،گوجه،پنیر چدار ورقه‌ایی ،هالوپینو ،سس مخصوص </p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۴۵۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' همبرگر مخصوص  ', 450000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/18erasebg-transformed.png" class="burger">
+						<div class="star ">3/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">چیز برگر</h4>
+							<p class="tm-gallery-description">  برگر دست ساز ،نان گرد،کاهو،خیارشور،پیاز حلقه ایی،گوجه،پنیر چدار ورقه ایی ،سس مخصوص نورو</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۳۰۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' چیز برگر  ', 300000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/19erasebg-transformed.png" class="burger">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">ماشروم برگر</h4>
+							<p class="tm-gallery-description">۱۶۰ گرم برگر دست ساز،نان گرد،کاهو،خیارشور،پیاز حلقه ایی،گوجه،قارچ مزه دار شده سس مخصوص ، پنیر چدار ورقه ای</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۳۵۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' ماشروم برگر ', 350000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/c329f9a3623f251b0febf9ac9307b7c684b8a798_1611653159.jpg" class="burger">
+						<div class="star ">3/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">چیکن پستو</h4>
+							<p class="tm-gallery-description">
+								مرغ ، سس پستو
+								خیارشور،پیاز حلقه ایی،گوجه،قارچ مزه دار شده سس مخصوص ،
+								پنیر مخصوص نورو 
+							</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۸۰،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart('  چیکن  پستو', 180000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/16erasebg-transformed.png" class="pizza-beef-and-mushroom">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">هات داگ</h4>
+							<p class="tm-gallery-description">هات داگ گوشت ، نان باگت ،خیارشور،گوجه،قارچ مزه دار شده،پنیر چدار ورقه ایی،سس مخصوص </p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۲۷۰،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' هات داگ ', 270000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/17erasebg-transformed.png" class="pizza-beef-and-mushroom">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">زینگر برگر</h4>
+							<p class="tm-gallery-description">نان مخصوص ، سس مخصوص ، زینگر
+								کاهو،پنیر، گوجو مزه دار شده، خیار شور ، قارچ اختیاری 
+							</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۴۵۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' زینگر برگر', 450000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/JPEG image-4651-AC6D-F5-4.jpeg" class="pizza-beef-and-mushroom">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">هات داگ با پنیر گودا</h4>
+							<p class="tm-gallery-description">هات داگ گوشت ، نان باگت ،پنیر گودا،خیارشور،گوجه،قارچ مزه دار شده
+								سس مخصوص نورو 
+							</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price" style="font-family: 'Vazirmatn'">۳۵۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' هات داگ با پنیر گودا ', 350000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+			</div>
+
+				<div id="tm-gallery-page-کافی" class="tm-gallery-page hidden">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_B5F540625EAE-10.jpeg" class="burger">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">قهوه ترک</h4>
+							<p class="tm-gallery-description">۱ فنجان </p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۹۰،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' قهموه ترک ', 90000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_5B04F07CBE30-2.jpeg" class="coffe">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">ایس لاته</h4>
+							<p class="tm-gallery-description">قهموه ،شیر</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۷۰،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' ایس لاته ', 170000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/27erasebg-transformed.png" class="coffe">
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">ایس امریکانو</h4>
+							<div class="star ">4/5</div>
+							<p class="tm-gallery-description">قهوه</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۴۵،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' ایس امریکانو ', 145000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_5B04F07CBE30-3.jpeg" class="ofo">
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">افوگاتو</h4>
+							<div class="star ">3/5</div>
+							<p class="tm-gallery-description">قهوه و بستنی</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۹۸،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' افوگاتو ', 198000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_5B04F07CBE30-4.jpeg" class="ofo">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">هات چاکلت</h4>
+							<p class="tm-gallery-description">شکلات داغ</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۸۵،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' هات چاکلت ', 85000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_5B04F07CBE30-5.jpeg" class="tea">
+						<div class="star ">3/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">دمنوش آرامش بخش</h4>
+							<p class="tm-gallery-description">بهارنارنج،زنجبیل،نعناع</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۴۵،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' دمنوش ارامش بخش ', 145000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_5B04F07CBE30-6.jpeg" class="ofo">
+						<div class="star ">3/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">چای ماسالا</h4>
+							<p class="tm-gallery-description">ماسالا،شیر</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۲۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' چای ماسالا  ', 120000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_5B04F07CBE30-7.jpeg" class="ofo">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">چای</h4>
+							<p class="tm-gallery-description">۱ لیوان </p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۸۵،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' چای ', 85000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+			</div>
+
+				<div id="tm-gallery-page-دسر" class="tm-gallery-page hidden">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/25erasebg-transformed (2).png" class="pana">
+						<div class="star ">2/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پاناکوتا</h4>
+							<p class="tm-gallery-description">وانیل،شکر.خامه،ژلاتین</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۴۵،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' پاناکوتا ', 145000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/24erasebg-transformed (1).png" class="burger">
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">تیرامیسو</h4>
+							<div class="star ">4/5</div>
+							<p class="tm-gallery-description">قهوه ، شکر،پودر کاکائو</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۷۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' تیرامیسو  ', 170000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/26erasebg-transformed.png" class="burger">
+						<div class="star ">3/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">دسر شکلاتی</h4>
+							<p class="tm-gallery-description">شکلات، وانیل</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۲۰۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' دسر شکلاتی ', 200000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_B5F540625EAE-6.jpeg" class="brownie">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">براونی</h4>
+							<p class="tm-gallery-description">شکلات، وانیل</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۵۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' براونی ', 150000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_B5F540625EAE-4.jpeg" class="burger">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">باقلوا</h4>
+							<p class="tm-gallery-description">باقلوا ترکی</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۲۵۰،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' باقلوا ', 250000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_B5F540625EAE-3.jpeg" class="burger">
+						<div class="star ">3/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">چیز کیک سن سباستین</h4>
+							<p class="tm-gallery-description">شکر،خامه،پنیر خامه ای</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۱۳۵،۰۰۰ تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' چیز کیک سن سباستین ', 135000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_B5F540625EAE-8.jpeg" class="burger">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">بستنی</h4>
+							<p class="tm-gallery-description">بستنی روز</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۷۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' بستنی ', 70000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+				<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+					<figure>
+						<img src="img/gallery/IMG_B5F540625EAE-7.jpeg" class="burger">
+						<div class="star ">4/5</div>
+						<figcaption>
+							<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">موچی</h4>
+							<p class="tm-gallery-description">برنج،خامه،شکر</p>
+							<div class="star-icon">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<p class="tm-gallery-price">۹۰،۰۰۰تومان</p>
+							<span class="menu-item-add" onclick="addToCart(' موچی ', 90000, 1)">
+								<div class="basket-icon ">
+									<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+									bottom: 10px;
+									padding: 5px 8px;
+									border-radius: 2px;
+									margin-bottom: 80px;
+									cursor: pointer;"></i>
+								</div>
+							</span>
+						</figcaption>
+					</figure>
+				</article>
+			</div>
+
+				<div id="tm-gallery-page-پیش-غذا" class="tm-gallery-page hidden">
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img  src="img/gallery/fries_PNG18.png" class="mushroom">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">فرایز</h4>
+								<p class="tm-gallery-description">۱۸۰ گرم سیب زمینی
+									در کنار دو تا سس دلخواه ، سس ها دست ساز هستند.
+								</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۱۲۰،۰۰۰تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' فرایز ', 120000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/21erasebg-transformed.png" class="bread">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">نون سیر </h4>
+								<p class="tm-gallery-description">خمیر پیتزا ۱۷ سانتی، ترکیب ۴ نوع پنیر، سس سیر مخصوص، ادویه مخصوص</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۷۰،۰۰۰تومان</p>
+								<span class="menu-item-add" onclick="addToCart('نون سیر', 70000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/23erasebg-transformed (2).png" class="mushroom">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'"> قارچ سوخاری</h4>
+								<p class="tm-gallery-description">۲۵۰ گرم قارچ سوخاری، سس سیر مخصوص، سس کچاپ.</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۱۸۰،۰۰۰تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' قارچ سوخاری ', 180000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/22erasebg-transformed (1).png" class="onion">
+							<figcaption>
+								<h4 class="tm-gallery-title" style="font-family: 'Vazirmatn'">پیاز سوخاری</h4>
+								<p class="tm-gallery-description">۶-۷ عدد پیاز سوخاری، سس سیر مخصوص، سس کچاپ.</p>
+								<div class="star-icon">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<p class="tm-gallery-price">۱۲۰،۰۰۰تومان</p>
+								<span class="menu-item-add" onclick="addToCart(' پیاز سوخاری ', 120000, 1)">
+									<div class="basket-icon ">
+										<i class="fa fa-shopping-basket" style="position: absolute; left: 7px;
+										bottom: 10px;
+										padding: 5px 8px;
+										border-radius: 2px;
+										margin-bottom: 80px;
+										cursor: pointer;"></i>
+									</div>
+								</span>
+							</figcaption>
+						</figure>
+					</article>
+				</div>
+
+			</div>
+			
+		</main>
+		
+
+		<footer class="tm-footer text-center">
+			<div class="reservation-form">
+				<h2>رزرو آنلاین میز</h2>
+				<form id="reservationForm">
+					<label for="name">نام:</label>
+					<input type="text" id="name" name="name" required>
+	
+					<label for="date">تاریخ:</label>
+					<input type="date" id="date" name="date" required>
+	
+					<label for="time">ساعت:</label>
+					<input type="time" id="time" name="time" required>
+	
+					<label for="guests">تعداد نفرات:</label>
+					<input type="number" id="guests" name="guests" min="1" max="20" required>
+	
+					<button type="submit">رزرو کنید</button>
+				</form>
+				<p id="confirmation" style="display: none;"></p>
+			</div>
+
+			<div class="qr-section">
+				<h3>منوی ما رو اسکن کنید!</h3>
+				<img src="img/QR code/8Fg5Kh.svg" alt="QR Code منو" class="qr-code">
+				<p>با اسکن این کد، منو رو در گوشی ببینید</p>
+				<a href="https://noro.cafe/menu" class="qr-link">یا مستقیم وارد شوید</a>
+			</div>
+			<i class="fa fa-phone"></i>
+			<i class="fa fa-envelope"></i>
+			<p >تماس با ما: 214536819 | ایمیل: noro.gmail.com</p>
+
+
+			<p>Copyright &copy; NoRo
+            
+            | Design:  </p>
+		</footer>
+
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+	<script>
+
+        // تابع برای اضافه کردن به سبد
+        function addToCart(name, price, quantity) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ name, price, quantity });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+			alert(`${name} به سبد خرید اضافه شد!`);
+            updateCartNotification(); // به‌روز کردن نوتیفیکیشن
+        }
+
+
+        // تابع برای به‌روز کردن نوتیفیکیشن
+        function updateCartNotification() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const notification = document.getElementById('cart-notification');
+            notification.textContent = totalItems;
+        }
+
+        // لود اولیه نوتیفیکیشن
+        window.onload = updateCartNotification;
+
+    </script>
+
+
+  <script>
+	  // مدیریت فرم
+	  document.getElementById('reservationForm').addEventListener('submit', function(event) {
+		  event.preventDefault();
+		  alert('رزرو شما ثبت شد!');
+	  });
+
+	 
+  </script>
+
+	
+	<script>
+		//پیتزا به ذسر مثلا
+		$(document).ready(function(){
+			$('.tm-paging-link').click(function(e){
+				e.preventDefault();
+				var page = $(this).text().toLowerCase();
+				$('.tm-gallery-page').addClass('hidden');
+				$('#tm-gallery-page-' + page).removeClass('hidden');
+				$('.tm-paging-link').removeClass('active');
+				$(this).addClass("active");
+			});
+		});
+	</script>
+</body>
+</html>

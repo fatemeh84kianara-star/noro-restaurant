@@ -1,0 +1,246 @@
+<html lang="fa" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple House login </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
+	<link href="css/style.css" rel="stylesheet" />
+
+    <style>
+
+		  /*QR CODE*/
+	.qr-section {
+    	text-align: center;
+    	padding: 30px 20px;
+    	background: #f8f9fa;
+    	border-radius: 15px;
+    	margin: 30px auto;
+    	max-width: 400px;
+    	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		}
+
+	.qr-code {
+    	width: 180px;
+    	height: 180px;
+    	border: 8px solid white;
+    	border-radius: 12px;
+    	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    	margin: 15px auto;
+    	display: block;
+			}
+
+	.qr-section h3 {
+    	color: #8b5a2b;
+    	margin-bottom: 10px;
+    	font-size: 1.3rem;
+	}
+
+	.qr-section p {
+   	 	color: #666;
+    	font-size: 0.95rem;
+    	margin: 10px 0;
+		}
+
+	.qr-link {
+    	display: inline-block;
+   	 	margin-top: 10px;
+   	 	color: #27ae60;
+    	text-decoration: none;
+    	font-weight: bold;
+    	font-size: 0.9rem;
+	}
+
+	.qr-link:hover {
+    	color: #1e8449;
+	}
+        
+		.loginaccount{
+			justify-content: center;
+  			margin-right: 375px;
+  			margin-top: 50px;
+  			margin-bottom: 50px;
+		}
+
+		.emailborder{
+  			border-radius: 5px;
+  			border: solid;
+  			border-color: grey;
+  			border-width: 1px;
+  			margin-right: 10px;
+  			padding-right: 10px;
+		}
+
+		.confirmbtn{
+  			background-color: #28a745;
+  			margin-right: 10px;
+		}
+
+		.account{
+  			border: solid;
+  			margin-top: 20px;
+  			border-color: greenyellow;
+  			border-width: 1px;
+  			border-radius: 50px;
+		}
+
+		
+
+		
+    </style>
+</head>
+
+<body>
+    <div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" >
+				<div class="mainphoto">
+					<img class="mainphoto1" src="img/IMG_8322.JPG">
+				</div>			
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<div class="mainlogo">
+								<img src="img/mainlogo Small.png" alt="Logo" class="tm-site-logo" /> 
+							</div>
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">نورو - NoRo</h1>
+								<h6 class="tm-site-description">Noro cafe and restaurant</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="index.html" class="tm-nav-link">خانه</a></li>
+								<li class="tm-nav-li"><a href="about.html" class="tm-nav-link">درباره</a></li>
+								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link ">نظرات شما</a></li>
+								<li class="tm-nav-li">
+									<a href="basket.html" class="tm-nav-link">
+										سبد خرید
+									</a>
+								</li>
+                                <li class="tm-nav-li">
+                                    <a href="login.html" class="tm-nav-link active">
+                                        عضویت/ ورود
+                                    </a>
+                                </li>
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- ====== فرم عضویت ====== -->
+<div class="account-container">
+    <div class="account">
+        <form class="loginaccount" id="signup-form">
+            <h3 style="font-family: 'Vazirmatn'">عضویت در نورو</h3>
+            <input class="emailborder" type="email" id="email" placeholder="ایمیل خود را وارد کنید" required>
+            <input class="emailborder" type="password" id="password" placeholder="رمز عبور" required>
+            <button class="confirmbtn" type="submit">ثبت نام</button>
+            <p id="signup-message" style="margin-top:10px; color:green; font-size:0.9rem;"></p>
+        </form>
+    </div>
+</div>
+
+
+<footer class="tm-footer text-center">
+
+		<footer class="tm-footer text-center">
+			<div class="reservation-form">
+				<h2>رزرو آنلاین میز</h2>
+				<form id="reservationForm">
+					<label for="name">نام:</label>
+					<input type="text" id="name" name="name" required>
+	
+					<label for="date">تاریخ:</label>
+					<input type="date" id="date" name="date" required>
+	
+					<label for="time">ساعت:</label>
+					<input type="time" id="time" name="time" required>
+	
+					<label for="guests">تعداد نفرات:</label>
+					<input type="number" id="guests" name="guests" min="1" max="20" required>
+	
+					<button type="submit">رزرو کنید</button>
+				</form>
+				<p id="confirmation" style="display: none;"></p>
+			</div>
+			<div class="qr-section">
+				<h3>منوی ما رو اسکن کنید!</h3>
+				<img src="img/QR code/8Fg5Kh.svg" alt="QR Code منو" class="qr-code">
+				<p>با اسکن این کد، منو رو در گوشی ببینید</p>
+				<a href="https://noro.cafe/menu" class="qr-link">یا مستقیم وارد شوید</a>
+			</div>
+			<i class="fa fa-phone"></i>
+			<i class="fa fa-envelope"></i>
+			<p>تماس با ما: 214536819 | ایمیل: noro.gmail.com</p>
+
+          
+
+			<p>Copyright &copy; NoRo
+            
+				| Design:  </p>
+		</footer>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/script.js"></script>
+
+  <script>
+
+	  // مدیریت فرم
+	  document.getElementById('reservationForm').addEventListener('submit', function(event) {
+		  event.preventDefault();
+		  alert('رزرو شما ثبت شد!');
+	  });
+  </script>
+
+<script>
+    // فرم عضویت
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // جلوگیری از رفرش صفحه
+
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+        const messageEl = document.getElementById('signup-message');
+
+        // اعتبارسنجی ساده
+        if (!email || !password) {
+            messageEl.style.color = 'red';
+            messageEl.textContent = 'لطفاً همه فیلدها را پر کنید!';
+            return;
+        }
+
+        if (!email.includes('@') || !email.includes('.')) {
+            messageEl.style.color = 'red';
+            messageEl.textContent = 'ایمیل معتبر نیست!';
+            return;
+        }
+
+        if (password.length < 4) {
+            messageEl.style.color = 'red';
+            messageEl.textContent = 'رمز عبور باید حداقل ۴ کاراکتر باشد!';
+            return;
+        }
+		//ذخیره
+        const user = { email, password, joinedAt: new Date().toLocaleString('fa-IR') };
+        localStorage.setItem('noroUser', JSON.stringify(user));
+
+
+        messageEl.style.color = 'green';
+        messageEl.textContent = `خوش آمدی ${email.split('@')[0]}! ثبت نام موفق بود.`;
+
+        // پاک کردن فرم
+        this.reset();
+
+        //  ریدایرکت به صفحه اصلی بعد از ۲ ثانیه
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 2000);
+    });
+</script>
+</body>
+</html>
